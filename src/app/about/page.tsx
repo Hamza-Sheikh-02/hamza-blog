@@ -7,7 +7,6 @@ const About = () => {
     <div className="bg-white dark:bg-black text-gray-900 dark:text-gray-100 min-h-screen">
       <section className="body-font">
         <div className="container px-5 py-24 mx-auto">
-          {/* About Section */}
           <div className="text-center mb-16">
             <h1 className="text-3xl font-medium text-gray-900 dark:text-gray-100 mb-4">
               About HamzaBlog
@@ -20,7 +19,6 @@ const About = () => {
             </p>
           </div>
 
-          {/* About Author Section */}
           <div className="flex justify-center mb-16">
             <div className="w-48 h-48 relative rounded-full overflow-hidden">
               <Image
@@ -45,7 +43,6 @@ const About = () => {
             </p>
           </div>
 
-          {/* Contact Section */}
           <div className="text-center">
             <h2 className="text-xl font-medium text-gray-900 dark:text-gray-100 mb-4">
               Let&apos;s Connect
