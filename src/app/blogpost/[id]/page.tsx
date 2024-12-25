@@ -2,13 +2,13 @@
 import { blogData } from "@/data/blogData"; 
 import { notFound } from "next/navigation";
 
-interface BlogPostProps {
+interface Props {
   params: {
     id: string;
   };
 }
 
-const BlogPost = ({ params }: BlogPostProps) => {
+async function BlogPost({ params }: Props) {
   const { id } = params;
 
   const blog = blogData.find((blog) => blog.id === id);
