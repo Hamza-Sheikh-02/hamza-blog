@@ -3,11 +3,11 @@ import { blogData } from "@/data/blogData";
 import { notFound } from "next/navigation";
 
 interface Props {
-  params: { id: string };
+  params: Promise<{ id: string }>;
 }
 
 export default async function BlogPost({ params }: Props) {
-  const { id } = params;
+  const { id } = await params;
 
   const blog = blogData.find((blog) => blog.id === id);
 
