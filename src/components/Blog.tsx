@@ -30,13 +30,13 @@ const Blog = () => {
   ];
 
   return (
-    <div>
-      <section className="text-gray-600 body-font">
+    <div className="bg-white dark:bg-black text-gray-900 dark:text-gray-100 min-h-screen">
+      <section className="body-font">
         <div className="container px-5 py-24 mx-auto">
           <div className="flex flex-wrap -m-4">
             {blogs.map((blog, index) => (
               <div className="p-4 md:w-1/3" key={index}>
-                <div className="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
+                <div className="h-full border-2 border-gray-200 dark:border-gray-700 border-opacity-60 rounded-lg overflow-hidden">
                   <div className="relative w-full h-48">
                     <Image
                       src={blog.image}
@@ -47,17 +47,17 @@ const Blog = () => {
                     />
                   </div>
                   <div className="p-6">
-                    <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">
+                    <h2 className="tracking-widest text-xs title-font font-medium text-gray-500 dark:text-gray-400 mb-1">
                       {blog.category.toUpperCase()}
                     </h2>
-                    <h1 className="title-font text-lg font-medium text-gray-900 mb-3">
+                    <h1 className="title-font text-lg font-medium text-gray-900 dark:text-gray-100 mb-3">
                       {blog.title}
                     </h1>
                     <p className="leading-relaxed mb-3">{blog.description}</p>
-                    <div className="flex items-center flex-wrap ">
+                    <div className="flex items-center flex-wrap">
                       <a
                         href={blog.link}
-                        className="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0"
+                        className="text-indigo-500 dark:text-indigo-400 inline-flex items-center md:mb-2 lg:mb-0"
                       >
                         Learn More
                         <svg
@@ -78,6 +78,14 @@ const Blog = () => {
                 </div>
               </div>
             ))}
+          </div>
+          <div className="flex justify-center mt-8">
+            <a
+              href="/blog"
+              className="bg-indigo-500 dark:bg-indigo-600 text-white px-6 py-2 rounded-lg text-lg hover:bg-indigo-600 dark:hover:bg-indigo-700 transition"
+            >
+              Explore More Blogs
+            </a>
           </div>
         </div>
       </section>
