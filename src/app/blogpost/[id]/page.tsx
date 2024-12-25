@@ -1,14 +1,12 @@
 // src/app/blogpost/[id]/page.tsx
-import { blogData } from "@/data/blogData"; 
+import { blogData } from "@/data/blogData";
 import { notFound } from "next/navigation";
 
 interface Props {
-  params: {
-    id: string;
-  };
+  params: { id: string };
 }
 
-async function BlogPost({ params }: Props) {
+export default async function BlogPost({ params }: Props) {
   const { id } = params;
 
   const blog = blogData.find((blog) => blog.id === id);
@@ -44,6 +42,4 @@ async function BlogPost({ params }: Props) {
       </div>
     </div>
   );
-};
-
-export default BlogPost;
+}
