@@ -8,24 +8,24 @@ const Blog = () => {
       category: "TypeScript",
       description:
         "Learn how TypeScript can enhance your JavaScript projects with type safety and better tooling.",
-      image: "/blog1.png",
-      link: "/blog/typescript",
+      image: "/typescript.png",
+      link: "/blogpost/typescript",
     },
     {
       title: "Mastering Next.js",
       category: "Next.js",
       description:
         "Explore the powerful features of Next.js for building high-performance web applications.",
-      image: "/blog2.png",
-      link: "/blog/nextjs",
+      image: "/nextjs.png",
+      link: "/blogpost/nextjs",
     },
     {
       title: "Building with Shadcn",
       category: "Shadcn",
       description:
         "Discover how Shadcn simplifies your component development with accessible and flexible libraries.",
-      image: "/blog3.png",
-      link: "/blog/shadcn",
+      image: "/shadcn.png",
+      link: "/blogpost/shadcn",
     },
   ];
 
