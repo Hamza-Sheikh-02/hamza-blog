@@ -14,6 +14,7 @@ import { ModeToggle } from "@/components/theme-button";
 import LoadingBar from "react-top-loading-bar";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
+import Image from "next/image";
 
 const Navbar = () => {
   const [progress, setProgress] = useState(0);
@@ -45,15 +46,15 @@ const Navbar = () => {
         onLoaderFinished={() => setProgress(0)}
       />
       <div className="container mx-auto flex justify-between items-center">
-        <Link href={"/"}>
-          <div className="text-lg font-bold">Hamza Blog</div>
+        <Link href={"/"} className="flex items-center space-x-2">
+          <Image src={"/logo.png"} alt="logo" width={50} height={20} />
+          <span className="text-lg font-bold">Hamza Blog</span>
         </Link>
         <div className="hidden md:flex space-x-4 items-center">
           <Link
             href="/"
             className="hover:scale-105 hover:font-semibold transition-transform duration-300"
           >
-            {" "}
             Home
           </Link>
           <Link
@@ -102,15 +103,13 @@ const Navbar = () => {
             </SheetTrigger>
             <SheetContent>
               <SheetHeader>
-                <SheetTitle className="font-bold my-4">HarryBlog</SheetTitle>
-                <SheetDescription>
-                  <div className="flex flex-col gap-6">
-                    <Link href="/"> Home</Link>
-                    <Link href="/about">About</Link>
-                    <Link href="/blog">Blog</Link>
-                    <Link href="/contact">Contact</Link>
-                  </div>
-                </SheetDescription>
+                <SheetTitle className="font-bold my-4">HamzaBlog</SheetTitle>
+                <div className="flex flex-col gap-6">
+                  <Link href="/">Home</Link>
+                  <Link href="/about">About</Link>
+                  <Link href="/blog">Blog</Link>
+                  <Link href="/contact">Contact</Link>
+                </div>
               </SheetHeader>
             </SheetContent>
           </Sheet>
