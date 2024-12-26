@@ -1,4 +1,3 @@
-// src/app/blog/page.tsx
 import Link from "next/link";
 import Image from "next/image";
 import { blogData } from "@/data/blogData";
